@@ -1,14 +1,15 @@
-1..5.times do
+rand(1..5).times do
   User.create!(name: Faker::Name.name)
 end
 
-1..3.times do
+rand(1..3).times do
   course = Course.create!(
     title: Faker::Educator.subject,
-    body: Faker::Company.bs
+    body: Faker::Company.bs,
+    price: rand(1000..5000)
   )
 
-  1..10.times do
+  rand(1..10).times do
     lesson = Lesson.create!(
       title: Faker::Educator.subject,
       body: Faker::Company.bs,

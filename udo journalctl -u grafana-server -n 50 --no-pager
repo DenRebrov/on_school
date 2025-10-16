@@ -1,0 +1,12 @@
+[0;1;31m●[0m grafana-server.service - Grafana instance
+     Loaded: loaded (/lib/systemd/system/grafana-server.service; enabled; vendor preset: enabled)
+     Active: [0;1;31mfailed[0m (Result: exit-code) since Thu 2025-10-16 16:37:27 MSK; 1min 59s ago
+       Docs: http://docs.grafana.org
+    Process: 30594 ExecStart=/usr/share/grafana/bin/grafana server --config=${CONF_FILE} --pidfile=${PID_FILE_DIR}/grafana-server.pid --packaging=deb cfg:default.paths.logs=${LOG_DIR} cfg:default.paths.data=${DATA_DIR} cfg:default.paths.plugins=${PLUGINS_DIR} cfg:default.paths.provisioning=${PROVISIONING_CFG_DIR} [0;1;31m(code=exited, status=1/FAILURE)[0m
+   Main PID: 30594 (code=exited, status=1/FAILURE)
+
+окт 16 16:37:27 den-VirtualBox systemd[1]: grafana-server.service: Scheduled restart job, restart counter is at 21.
+окт 16 16:37:27 den-VirtualBox systemd[1]: Stopped Grafana instance.
+окт 16 16:37:27 den-VirtualBox systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgrafana-server.service: Start request repeated too quickly.[0m
+окт 16 16:37:27 den-VirtualBox systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mgrafana-server.service: Failed with result 'exit-code'.[0m
+окт 16 16:37:27 den-VirtualBox systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start Grafana instance.[0m

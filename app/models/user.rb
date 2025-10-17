@@ -3,4 +3,8 @@ class User < ApplicationRecord
   has_many :courses, through: :enrollments
 
   validates :name, presence: true, length: { maximum: 40 }
+
+  def admin?
+    id == 1
+  end
 end
